@@ -25,6 +25,6 @@ def read_temp():
 		temp_C = float(temp_string)/ 1000.
 		temp_F = temp_C * 9/5. + 32.
 		return temp_C, temp_F
-while True:
-	print(read_temp())
-	time.sleep(1)
+#while True:
+#	print(read_temp())
+#	time.sleep(1)
