@@ -2,6 +2,7 @@
 #import urllib2
 import urllib.request
 import time
+
 #Setup URL
 #url = 'http://192.168.1.126:8080/teradata'
 url = 'http://10.51.6.90:8080/teradata' # The raspberry Pi as the 
@@ -9,5 +10,5 @@ url = 'http://10.51.6.90:8080/teradata' # The raspberry Pi as the
 while True:
 	with urllib.request.urlopen(url) as response:
 		r = response.read()
-		print(r)
-		time.sleep(1)
+		print(r.decode('utf-8')) 
+		# decode bytes to UTF8 format
