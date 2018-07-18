@@ -1,15 +1,46 @@
+'''
+Created: 18 July 2018
+Author: Sibonelo
+Collaborators: Peet, Promise
+
+Ran: In python 2.x in order to be able to access 
+the web module. python ws.py
+
+'''
 import web
+import Rpi_temp_reader
+import time
 
 urls = (
-    '/(.*)', 'hello'
+    '/(.*)', 'Rpi_Temp'
 )
+
 app = web.application(urls, globals())
 
-class hello:        
+class Rpi_Temp:
     def GET(self, name):
-        if not name: 
-            name = 'world'
-        return 'Hello, ' + name + '!'
+        '''
+          This function calls the temperature function in
+          the script Rpi_temp_reader.py and 
+            Args: None
+
+          returns temp in degrees Celcius
+        Under construction: the function is supposed to sleep for
+        1 ms before returning tempC again
+
+        '''
+        while True:
+            tempC, tempF = Rpi_temp_reader.read_temp()
+            return tempC
+            time.sleep(1)
 
 if __name__ == "__main__":
     app.run()
+
+# Done now, run the web client part of the code in your desktop CLI
+# using the IP address of this server ( Raspberry PI IP address).
+# Check wcl.py in the github link https://github.com/Neloh/IoT
+
+# The readme.md file should be enough to help you deploy the code
+# in your own environment.
+
