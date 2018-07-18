@@ -1,0 +1,53 @@
+2018-07-18 15:03:14,248 - teradata.udaexec - INFO - Initializing UdaExec...
+2018-07-18 15:03:14,248 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\Desktop\\IOT\\IoT\\udaexec.ini: Not Found']
+2018-07-18 15:03:14,248 - teradata.udaexec - INFO - No previous run number found as C:\Users\pphahlamohlaka\Desktop\IOT\IoT\.runNumber does not exist. Initializing run number to 1
+2018-07-18 15:03:14,248 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2018-07-18 15:03:14,249 - teradata.udaexec - INFO - Removed 0 log files.
+2018-07-18 15:03:14,251 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\pphahlamohlaka\Desktop\IOT\IoT\TestAPP.checkpoint
+2018-07-18 15:03:14,251 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2018-07-18 15:03:14,254 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: TestAPP
+ *          Version: 1.0
+ *       Run Number: 20180718150314-1
+ *             Host: NB-PPROMISE
+ *         Platform: Windows-10-10.0.16299-SP0
+ *          OS User: PPhahlamohlaka
+ *   Python Version: 3.6.5
+ *  Python Compiler: MSC v.1900 64 bit (AMD64)
+ *     Python Build: ('default', 'Mar 29 2018 13:32:41')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: wcl.py
+ *      Working Dir: C:\Users\pphahlamohlaka\Desktop\IOT\IoT
+ *          Log Dir: C:\Users\pphahlamohlaka\Desktop\IOT\IoT\logs
+ *         Log File: C:\Users\pphahlamohlaka\Desktop\IOT\IoT\logs\TestAPP.20180718150314-1.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\Desktop\\IOT\\IoT\\udaexec.ini: Not Found']
+ *      Query Bands: ApplicationName=TestAPP;Version=1.0;JobID=20180718150314-1;ClientUser=PPhahlamohlaka;Production=False;udaAppLogFile=C:\Users\pphahlamohlaka\Desktop\IOT\IoT\logs\TestAPP.20180718150314-1.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2018-07-18 15:03:14,254 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'dsn': 'teradata', 'username': 'dbc', 'password': 'XXXXXX'}
+2018-07-18 15:03:14,273 - teradata.tdodbc - INFO - Available drivers: SQL Server, SQL Server Native Client 10.0, PostgreSQL ANSI(x64), PostgreSQL Unicode(x64), SQL Server Native Client 11.0, MySQL ODBC 5.3 ANSI Driver, MySQL ODBC 5.3 Unicode Driver, DataDirect 7.1 DB2 Wire Protocol, DataDirect 7.1 Informix Wire Protocol, DataDirect 7.1 Sybase Wire Protocol, DataDirect 7.1 SQL Server Wire Protocol, DataDirect 7.1 dBaseFile, DataDirect 7.1 FoxPro 3.0, DataDirect 7.1 MySQL Wire Protocol, DataDirect 7.1 New SQL Server Wire Protocol, DataDirect 7.1 Greenplum Wire Protocol, Informatica MongoDB ODBC Driver, DataDirect 7.1 Oracle Wire Protocol, Informatica Cassandra ODBC Driver, Informatica Data Services ODBC Driver 10.2.0, ODBC Driver 13 for SQL Server, Oracle in XE, Teradata Database ODBC Driver 16.20
+2018-07-18 15:03:15,985 - teradata.udaexec - INFO - Connection successful. Duration: 1.731 seconds. Details: {'method': 'odbc', 'dsn': 'teradata', 'username': 'dbc', 'password': 'XXXXXX'}
+2018-07-18 15:03:17,097 - teradata.udaexec - ERROR - Query Failed! Duration: 0.012 seconds, Query: CALL tdata_db_000.Weather_Log_Create(b'24.875', 6)
+Traceback (most recent call last):
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3707, "[42000] [Teradata][ODBC Teradata Driver][Teradata Database](-3707)Syntax error, expected something like ')' or ',' between the word 'b' and the string '24.875'.")
+2018-07-18 15:03:17,104 - teradata.udaexec - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "wcl.py", line 31, in <module>
+    cursor.execute(proc_string);
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\site-packages\teradata\udaexec.py", line 745, in execute
+    self._execute(self.cursor.execute, query, params, **kwargs)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3707, "[42000] [Teradata][ODBC Teradata Driver][Teradata Database](-3707)Syntax error, expected something like ')' or ',' between the word 'b' and the string '24.875'.")
+2018-07-18 15:03:17,130 - teradata.tdodbc - WARNING - 1 open connections found on exit, attempting to close...
+2018-07-18 15:03:17,242 - teradata.udaexec - INFO - UdaExec exiting.

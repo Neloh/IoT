@@ -1,0 +1,79 @@
+2018-07-18 15:09:45,605 - teradata.udaexec - INFO - Initializing UdaExec...
+2018-07-18 15:09:45,605 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\Desktop\\IOT\\IoT\\udaexec.ini: Not Found']
+2018-07-18 15:09:45,606 - teradata.udaexec - INFO - Found run number file: "C:\Users\pphahlamohlaka\Desktop\IOT\IoT\.runNumber"
+2018-07-18 15:09:45,606 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2018-07-18 15:09:45,606 - teradata.udaexec - INFO - Removed 0 log files.
+2018-07-18 15:09:45,607 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\pphahlamohlaka\Desktop\IOT\IoT\TestAPP.checkpoint
+2018-07-18 15:09:45,609 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2018-07-18 15:09:45,609 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: TestAPP
+ *          Version: 1.0
+ *       Run Number: 20180718150945-4
+ *             Host: NB-PPROMISE
+ *         Platform: Windows-10-10.0.16299-SP0
+ *          OS User: PPhahlamohlaka
+ *   Python Version: 3.6.5
+ *  Python Compiler: MSC v.1900 64 bit (AMD64)
+ *     Python Build: ('default', 'Mar 29 2018 13:32:41')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: wcl.py
+ *      Working Dir: C:\Users\pphahlamohlaka\Desktop\IOT\IoT
+ *          Log Dir: C:\Users\pphahlamohlaka\Desktop\IOT\IoT\logs
+ *         Log File: C:\Users\pphahlamohlaka\Desktop\IOT\IoT\logs\TestAPP.20180718150945-4.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\udaexec.ini: Not Found', 'C:\\Users\\pphahlamohlaka\\Desktop\\IOT\\IoT\\udaexec.ini: Not Found']
+ *      Query Bands: ApplicationName=TestAPP;Version=1.0;JobID=20180718150945-4;ClientUser=PPhahlamohlaka;Production=False;udaAppLogFile=C:\Users\pphahlamohlaka\Desktop\IOT\IoT\logs\TestAPP.20180718150945-4.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2018-07-18 15:09:45,610 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'dsn': 'teradata', 'username': 'dbc', 'password': 'XXXXXX'}
+2018-07-18 15:09:45,616 - teradata.tdodbc - INFO - Available drivers: SQL Server, SQL Server Native Client 10.0, PostgreSQL ANSI(x64), PostgreSQL Unicode(x64), SQL Server Native Client 11.0, MySQL ODBC 5.3 ANSI Driver, MySQL ODBC 5.3 Unicode Driver, DataDirect 7.1 DB2 Wire Protocol, DataDirect 7.1 Informix Wire Protocol, DataDirect 7.1 Sybase Wire Protocol, DataDirect 7.1 SQL Server Wire Protocol, DataDirect 7.1 dBaseFile, DataDirect 7.1 FoxPro 3.0, DataDirect 7.1 MySQL Wire Protocol, DataDirect 7.1 New SQL Server Wire Protocol, DataDirect 7.1 Greenplum Wire Protocol, Informatica MongoDB ODBC Driver, DataDirect 7.1 Oracle Wire Protocol, Informatica Cassandra ODBC Driver, Informatica Data Services ODBC Driver 10.2.0, ODBC Driver 13 for SQL Server, Oracle in XE, Teradata Database ODBC Driver 16.20
+2018-07-18 15:09:46,894 - teradata.udaexec - INFO - Connection successful. Duration: 1.284 seconds. Details: {'method': 'odbc', 'dsn': 'teradata', 'username': 'dbc', 'password': 'XXXXXX'}
+2018-07-18 15:09:48,013 - teradata.udaexec - INFO - Query Successful. Duration: 0.067 seconds, Query: CALL tdata_db_000.Weather_Log_Create(24.937, 6)
+2018-07-18 15:09:49,033 - teradata.udaexec - INFO - Query Successful. Duration: 0.041 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:09:50,057 - teradata.udaexec - INFO - Query Successful. Duration: 0.035 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:09:51,320 - teradata.udaexec - INFO - Query Successful. Duration: 0.046 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:09:52,324 - teradata.udaexec - INFO - Query Successful. Duration: 0.032 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:09:53,294 - teradata.udaexec - INFO - Query Successful. Duration: 0.077 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:09:54,447 - teradata.udaexec - INFO - Query Successful. Duration: 0.033 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:09:55,490 - teradata.udaexec - INFO - Query Successful. Duration: 0.036 seconds, Query: CALL tdata_db_000.Weather_Log_Create(24.937, 6)
+2018-07-18 15:09:56,533 - teradata.udaexec - INFO - Query Successful. Duration: 0.036 seconds, Query: CALL tdata_db_000.Weather_Log_Create(24.937, 6)
+2018-07-18 15:09:57,576 - teradata.udaexec - INFO - Query Successful. Duration: 0.034 seconds, Query: CALL tdata_db_000.Weather_Log_Create(24.937, 6)
+2018-07-18 15:09:58,724 - teradata.udaexec - INFO - Query Successful. Duration: 0.033 seconds, Query: CALL tdata_db_000.Weather_Log_Create(24.937, 6)
+2018-07-18 15:09:59,674 - teradata.udaexec - INFO - Query Successful. Duration: 0.038 seconds, Query: CALL tdata_db_000.Weather_Log_Create(24.937, 6)
+2018-07-18 15:10:00,700 - teradata.udaexec - INFO - Query Successful. Duration: 0.037 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:10:01,845 - teradata.udaexec - INFO - Query Successful. Duration: 0.020 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:10:02,798 - teradata.udaexec - INFO - Query Successful. Duration: 0.032 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:10:03,737 - teradata.udaexec - INFO - Query Successful. Duration: 0.030 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:10:04,784 - teradata.udaexec - INFO - Query Successful. Duration: 0.031 seconds, Query: CALL tdata_db_000.Weather_Log_Create(25.0, 6)
+2018-07-18 15:10:04,838 - teradata.udaexec - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "wcl.py", line 21, in <module>
+    with urllib.request.urlopen(url) as response:
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\urllib\request.py", line 526, in open
+    response = self._open(req, data)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\urllib\request.py", line 544, in _open
+    '_open', req)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\urllib\request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\http\client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Users\pphahlamohlaka\AppData\Local\Continuum\anaconda3\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+KeyboardInterrupt
+2018-07-18 15:10:04,887 - teradata.tdodbc - WARNING - 1 open connections found on exit, attempting to close...
+2018-07-18 15:10:04,941 - teradata.udaexec - INFO - UdaExec exiting.
