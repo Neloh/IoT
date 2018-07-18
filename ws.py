@@ -26,7 +26,7 @@ class Rpi_Temp:
 
           returns temp in degrees Celcius
         Under construction: the function is supposed to sleep for
-        1 ms before returning tempC again
+        1 second before returning tempC again
 
         '''
         while True:
