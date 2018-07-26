@@ -15,21 +15,23 @@ session = udaExec.connect(method="odbc", dsn="teradata",
 
 #Setup URL
 #url = 'http://192.168.1.126:8080/teradata'
-url = 'http://10.51.6.90:8080/teradata' # The raspberry Pi as the 
+url = 'http://10.51.6.112:8080/temp' # The raspberry Pi as the 
 # web service.
 while True:
 	with urllib.request.urlopen(url) as response:
-		temperature = response.read()
-		#print(temperature)
-		#decode bytes to UTF8 format
-		temperature = temperature.decode('utf-8')
+		avg_temperature_C, avg_temperature_F =\
+		 response.read().decode('utf-8').strip('(').strip(')').split(',')
 		
-		#Call stored procedure
-		#temperature = 6
-		humidity = 6
-		proc_string = "CALL tdata_db_000.Weather_Log_Create({0}, {1})".format(temperature, humidity)
+		#temperature = temperature[:-1] # strip the last entry off the string
+		#temperature = temperature[1:] # strip the first entry off 
+		
+		#avg_temperature_C, avg_temperature_F = temperature.split(',')
+		print("AVG Temp Celcius= {}, AVG Temp Fahrenheit= {}".format(float(avg_temperature_C),\
+		 float(avg_temperature_F)))
+
+		proc_string = "CALL tdata_db_2.Weather_Log_Create({0}, {1})".format(avg_temperature_C,\
+		 avg_temperature_F)
 
 		cursor =  session.cursor()
 		cursor.execute(proc_string);
 
-		

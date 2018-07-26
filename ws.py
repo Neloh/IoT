@@ -26,21 +26,23 @@ class Rpi_Temp:
 
           returns temp in degrees Celcius
         Under construction: the function is supposed to sleep for
-        1 second before returning tempC again
+        1 ms before returning tempC again
 
         '''
+        global temp_CC,temp_FF
         while True:
-            tempC, tempF = Rpi_temp_reader.read_temp()
-            return tempC
+            temp_CC, temp_FF = Rpi_temp_reader.avg_temp()
+            return temp_CC,temp_FF
             time.sleep(1)
 
 if __name__ == "__main__":
     app.run()
-
+   
+   
 # Done now, run the web client part of the code in your desktop CLI
 # using the IP address of this server ( Raspberry PI IP address).
 # Check wcl.py in the github link https://github.com/Neloh/IoT
 
-# The readme.md file should be enough to help you deploy the code
+# The README.md file should be enough to help you deploy the code
 # in your own environment.
 
